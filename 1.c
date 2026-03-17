@@ -1,37 +1,17 @@
 #include <stdio.h>
 
-int main()
+void swap(int *x, int *y)
 {
-	int sum = 0;
-	int i;
-	printf("(1) for 사용 : ");
-	for (i = 1; i <= 10; i++)
-	{
-		printf("%d ", i);
-		sum += i;
-	}
-	printf("sum=%d\n", sum);
+	int* swap;
+	swap = *x;
+	*x = *y;
+	*y = swap;
+}
 
-	i = 1;
-	sum = 0;
-	printf("(2) while 사용 : ");
-	while (i <= 10)
-	{
-		printf("%d ", i);
-		sum += i;
-		i++;
-	}
-	printf("sum=%d\n", sum);
-
-	i = 1;
-	sum = 0;
-	printf("(3) do ~ while 사용 : ");
-	do
-	{
-		printf("%d ", i);
-		sum += i;
-		i++;
-	} while (i < 11);
-	printf("sum=%d\n", sum);
-	return 0;
+main()
+{
+	int x = 100, y = 200;
+	printf("swap<> 호출 전 x=%d y=%d\n", x, y);
+	swap(&x, &y);
+	printf("swap<> 호출 후 x=%d y=%d\n", x, y);
 }
