@@ -9,7 +9,7 @@ int main()
 	FILE* out = fopen("output3.txt", "w");
 	if (in == NULL || out == NULL)
 	{
-		printf("ÆÄÀÏÀ» ¸ø¿°\n");
+		printf("Ã†Ã„Ã€ÃÃ€Â» Â¸Ã¸Â¿Â°\n");
 		return;
 	}
 	fscanf(in,"%d", &t);
@@ -28,6 +28,6 @@ int main()
 		}
 		fprintf(out,"%d %d %d\n", sum, max, min);
 		free(p);
-	}
+	} // 5-6ë²ˆ ë¬¸ì œ
 
 }
